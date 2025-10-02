@@ -1,5 +1,6 @@
 # MLX90393_testing
 magnometer, read on-chip temperature, X,Y,Z
+no need any library, testing only  
 
 
 ### burn.bat
@@ -13,13 +14,15 @@ SDA           --- SDA or A4
 SCL or SCK    --- SCL or A5  
 ![mlx90393_breadboard.JPG](mlx90393_breadboard.JPG)   
 
+### source code
+[MLX90393.ino](MLX90393.ino)  
 
 ### firmware
 with bootloader for Arduino UNO/NANO  
-MLX90393.ino.with_bootloader.standard.hex    
+[MLX90393.ino.with_bootloader.standard.hex  ](MLX90393.ino.with_bootloader.standard.hex)    
 
 for Atmega328p/168/8, no bootloader used  
-MLX90393.ino.standard.hex    
+[MLX90393.ino.standard.hex](MLX90393.ino.standard.hex)    
 
 
 ### result
