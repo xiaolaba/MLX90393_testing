@@ -7,32 +7,32 @@ it was not user friendly anyway, try your best,
 
 MLX90393 memory type, RAM (volatile memory) and ROM (perhaps FLASH memory type, non-volatile memory).
 
-both RAM and ROM are included two sections, 
-CUSTOMER AREA (the first 32 addresses are programmable by the user) 
-  0x00~0x09 (16bit word) Analog & Digital configuration bits, register 0~9, 16bit
-  0x0A~0x1F (16bit word) free, user can store any information
-Melexis AREA (write protected) 
-  0x20~0x3F (16bit word) read only  
+both RAM and ROM are included two sections,  
+CUSTOMER AREA (the first 32 addresses are programmable by the user)  
+  0x00 - 0x09 (16bit word) Analog & Digital configuration bits, register 0~9, 16bit  
+  0x0A - 0x1F (16bit word) free, user can store any information  
+Melexis AREA (write protected)   
+  0x20 - 0x3F (16bit word) read only   
 
-HS command, copies the entire RAM to ROM
-HR command, copies the entire ROM to RAM, it is performed automatically either through power on reset or warm reset by RT command.
+HS command, copies the entire RAM to ROM  
+HR command, copies the entire ROM to RAM, it is performed automatically either through power on reset or warm reset by RT command.  
 
-WR command, write section of CUSTOMER AREA of RAM only 
-RR command, read RAM, including CUSTOMER AREA and Melexis AREA
+WR command, write section of CUSTOMER AREA of RAM only  
+RR command, read RAM, including CUSTOMER AREA and Melexis AREA  
 
-The customer area houses 3 types of data:
-0x00~0x09, Analog & Digital configuration bits, 16bit REGISTER x 9
-0x0A~0x1F, free, user can store any information
+The customer area houses 3 types of data:  
+0x00~0x09, Analog & Digital configuration bits, 16bit REGISTER x 9  
+0x0A~0x1F, free, user can store any information  
 
 
-example code, how to set Register-0 via I2C bus
-1, I2C write address 0x0c
-2, issue WR command
-3, value for register-0 higher-nibble
-4, value for register-0 lower-nibble
-5, register-0 << 2
-6, end I2C transimisson
-7, read STATUS byte
+example code, how to set Register-0 via I2C bus  
+1, I2C write address 0x0c  
+2, issue WR command  
+3, value for register-0 higher-nibble  
+4, value for register-0 lower-nibble  
+5, register-0 << 2  
+6, end I2C transimisson  
+7, read STATUS byte  
 ```
     // init mlx90393 register0
     Wire.beginTransmission(Addr);    // Start I2C Transmission
