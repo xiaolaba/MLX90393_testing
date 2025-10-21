@@ -52,6 +52,29 @@ example code, how to set Register-0 via I2C bus
 ```
 
 
+### commands
+![MLX90393_command_set.JPG](MLX90393_command_set.JPG)  
+
+```
+   MLX90393_REG_NOP = (0x00),   
+   MLX90393_REG_SB = (0x10),  
+   MLX90393_REG_SWOC = (0x20),  
+   MLX90393_REG_SM = (0x30),  
+   MLX90393_REG_RM = (0x40),  
+   MLX90393_REG_RR = (0x50),  
+   MLX90393_REG_WR = (0x60),  
+   MLX90393_REG_HS = (0x70),
+   MLX90393_REG_EX = (0x80),
+// 0x90, 沒用或不公開
+// 0xA0, 沒用或不公開
+// 0xB0, 沒用或不公開
+// 0xC0, 沒用或不公開     
+   MLX90393_REG_HR = (0xD0),  
+// 0xE0, 沒用或不公開 
+   MLX90393_REG_RT = (0xF0),  
+```
+
+
 
 ### burn.bat
 burn firmware to MCU
