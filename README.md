@@ -9,10 +9,10 @@ MLX90393 memory type, RAM (volatile memory) and ROM (perhaps FLASH memory type, 
 
 both RAM and ROM are included two sections,  
 CUSTOMER AREA (the first 32 addresses are programmable by the user)  
-  0x00 - 0x09 (16bit word) Analog & Digital configuration bits, register 0~9, 16bit  
-  0x0A - 0x1F (16bit word) free, user can store any information  
+    0x00 - 0x09 (16bit word) Analog & Digital configuration bits, register 0~9, 16bit  
+    0x0A - 0x1F (16bit word) free, user can store any information  
 Melexis AREA (write protected)   
-  0x20 - 0x3F (16bit word) read only   
+    0x20 - 0x3F (16bit word) read only   
 
 HS command, copies the entire RAM to ROM  
 HR command, copies the entire ROM to RAM, it is performed automatically either through power on reset or warm reset by RT command.  
