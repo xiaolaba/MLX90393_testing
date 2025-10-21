@@ -21,9 +21,9 @@ HR command, copies the entire ROM to RAM, it is performed automatically either t
 WR command, write section of CUSTOMER AREA of RAM only  
 RR command, read RAM, including CUSTOMER AREA and Melexis AREA  
 
-The customer area houses 3 types of data:  
-0x00~0x09, Analog & Digital configuration bits, 16bit REGISTER x 9  
-0x0A~0x1F, free, user can store any information  
+The Customer area splited 3 types of 16bit registes:  
+0x00 - 0x09, Analog & Digital configuration bits, 16bit REGISTER x 9  
+0x0A - 0x1F, free, user can store any information  
 
 
 example code, how to set Register-0 via I2C bus  
