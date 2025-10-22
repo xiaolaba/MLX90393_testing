@@ -1,0 +1,29 @@
+
+MLX90393 16-bit Registers (RAM/ROM) Dump
+
+By xiao_laba_cn@yahoo.com
+==========================================
+
+SoftReset
+
+Load ROM to RAM
+
+dump RAM, 0x00-0x1F user RAM read/write, 0x20-0x3F read only
+
+offset    0    1    2    3    4    5    6    7    8    9    A    B    C    D    E    F
+--------------------------------------------------------------------------------------
+0x00 | 805C E180 01E5 5543 0000 0000 0000 0000 0000 0000 5A5A 07EA 07D0 8080 8078 807D 
+0x10 | 807A 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 
+0x20 | 3098 0E1B 0205 1156 B665 2945 6AE6 0328 0102 9C03 A1AF 4EBB 0421 0382 0AA8 2D34 
+0x30 | 50F7 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 2148 FB10 
+
+Clean user RAM 0x00 - 0x1F, fill in 0xABCD
+
+dump RAM again, 0x00-0x1F user RAM read/write, 0x20-0x3F read only
+
+offset    0    1    2    3    4    5    6    7    8    9    A    B    C    D    E    F
+--------------------------------------------------------------------------------------
+0x00 | ABCD ABCD ABCD ABCD ABCD ABCD ABCD ABCD ABCD ABCD ABCD ABCD ABCD ABCD ABCD ABCD 
+0x10 | ABCD ABCD ABCD ABCD ABCD ABCD ABCD ABCD ABCD ABCD ABCD ABCD ABCD ABCD ABCD ABCD 
+0x20 | 3098 0E1B 0205 1156 B665 2945 6AE6 0328 0102 9C03 A1AF 4EBB 0421 0382 0AA8 2D34 
+0x30 | 50F7 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 2148 FB10 
