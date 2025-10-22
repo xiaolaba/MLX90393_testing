@@ -75,8 +75,8 @@ example code, how to set Register-0 via I2C bus
 ```
 
 ### dump the ROM / RAM (REGISTER 0x00 - 0x3F)
-source code of the project[\MLX90393_dump_memory](\MLX90393_dump_memory)  
-result,
+source code of the project[MLX90393_dump_memory](MLX90393_dump_memory)   
+result,  
 ```
 MLX90393 16-bit Registers (RAM/ROM) Dump
 
